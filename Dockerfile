@@ -7,9 +7,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends git
 
 # Clone the specific version of the repository
 ARG REPO_URL=https://github.com/Asawari9/dockertest
-ARG TARGET_VERSION=master # Default branch, we'll override this
 
-RUN git clone --depth 1 --branch $TARGET_VERSION $REPO_URL .
+RUN git clone  $REPO_URL .
+
+ARG TARGET_VERSION=v1.0.0
+RUN git checkout $TARGET_VERSION
 
 # Install dependencies
 COPY requirements.txt .
