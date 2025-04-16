@@ -17,5 +17,8 @@ RUN git clone  $REPO_URL .
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+# Set Python path (optional but sometimes helpful)
+ENV PYTHONPATH=/app
+
 # Run tests
 CMD ["pytest", "tests"]
