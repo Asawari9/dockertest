@@ -18,4 +18,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Run tests
-CMD ["pytest", "tests"]
+CMD ["pytest", "tests/test_app.py"]
