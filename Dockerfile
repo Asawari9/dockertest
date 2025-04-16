@@ -10,7 +10,7 @@ ARG REPO_URL=https://github.com/Asawari9/dockertest
 
 RUN git clone  $REPO_URL .
 
-ARG TARGET_VERSION=v1.0.0
+ARG TARGET_VERSION=v1.1.0
 RUN git checkout $TARGET_VERSION
 
 # Install dependencies
